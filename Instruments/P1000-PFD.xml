@@ -1,0 +1,261 @@
+<PropertyList>
+ <name>P1000-PFD</name>
+ <w-base>436</w-base>
+ <h-base>570</h-base>
+
+  <layers>
+
+  <layer>
+   <name>ati</name>
+   <w>190</w>
+   <h>750</h>
+   <texture>
+    <path>Aircraft/NTPS/Instruments/Textures/P1000bezel.rgb</path>
+    <x1>0.823</x1>
+    <x2>0.924</x2>
+    <y1>0.210</y1>
+    <y2>0.791</y2>
+   </texture>
+   <transformations>
+     <transformation>       
+      <type>y-shift</type>
+      <offset>116</offset>
+     </transformation>   
+    <transformation>
+     <type>rotation</type>
+     <property>/orientation/roll-deg</property>
+     <min>-360.0</min>
+     <max>360.0</max>
+     <scale>-1</scale>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <property>/orientation/pitch-deg</property>
+     <min>-30.0</min>
+     <max>30.0</max>
+     <scale>-2.7</scale>
+     <offset>0</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
+
+     <layer>
+      <name>compass rose</name>
+       <texture>
+	<path>Aircraft/NTPS/Instruments/Textures/P1000bezel.rgb</path>
+	<x1>0.515</x1>
+	<y1>0.016</y1>
+	<x2>0.735</x2>
+	<y2>0.236</y2>
+      </texture>
+      <w>155</w>
+      <h>155</h>
+     <transformations>
+     <transformation>       
+      <type>y-shift</type>
+      <offset>-92</offset>
+     </transformation>      
+      <transformation>
+      <type>rotation</type>
+      <property>/orientation/heading-magnetic-deg</property>
+      <min>-360.0</min>
+      <max>360.0</max>
+      <scale>-1.0</scale>
+      <offset>-10</offset> 
+      </transformation>
+    </transformations>
+   </layer>
+
+
+  <layer>
+   <name>Vbars</name>
+   <w>118</w>
+   <h>40</h>
+   <texture>
+    <path>Aircraft/NTPS/Instruments/Textures/P1000bezel.rgb</path>
+    <x1>0.066</x1>
+    <x2>0.215</x2>
+    <y1>0.104</y1>
+    <y2>0.153</y2>
+   </texture>
+   <transformations>
+     <transformation>       
+      <type>y-shift</type>
+      <offset>116</offset>
+     </transformation>   
+    <transformation>
+     <type>rotation</type>
+     <property>/instrumentation/flightdirector/vbar-roll</property>
+     <min>-360.0</min>
+     <max>360.0</max>
+     <scale>-1</scale>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <property>/instrumentation/flightdirector/vbar-pitch</property>
+     <min>-90.0</min>
+     <max>90.0</max>
+     <scale>2.7</scale>
+     <offset>0</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
+
+
+ <layer>
+      <name>mask</name>
+       <texture>
+	<path>Aircraft/NTPS/Instruments/Textures/P1000mask.rgb</path>
+	<x1>0.0</x1>
+	<y1>0.0</y1>
+	<x2>1.0</x2>
+	<y2>1.0</y2>
+      </texture>
+      <w>1536</w>
+      <h>1152</h>
+     </layer>
+
+ <layer>
+      <name>bezel</name>
+       <texture>
+	<path>Aircraft/NTPS/Instruments/Textures/P1000bezel.rgb</path>
+	<x1>0.0</x1>
+	<y1>0.250</y1>
+	<x2>0.574</x2>
+	<y2>1.0</y2>
+      </texture>
+      <w>436</w>
+      <h>570</h>
+     </layer>
+
+  <layer>
+   <name>Airspeed Text</name>
+   <type>text</type>
+   <point-size>16</point-size>
+   <color>
+    <red>1.0</red>
+    <green>1.0</green>
+    <blue>1.0</blue>
+   </color>
+   <chunks>
+    <chunk>
+     <type>number-value</type>
+     <property>/velocities/airspeed-kt</property>
+     <format>%03.0f</format>
+    </chunk>
+   </chunks>
+   <transformations>
+    <transformation>
+     <type>x-shift</type>
+     <offset>-149</offset>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <offset>105</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
+
+  <layer>
+   <name>Mach Text</name>
+   <type>text</type>
+   <point-size>14</point-size>
+   <color>
+    <red>0.4</red>
+    <green>0.8</green>
+    <blue>0.0</blue>
+   </color>
+   <chunks>
+    <chunk>
+     <type>number-value</type>
+     <property>/velocities/mach</property>
+     <format>%1.3f</format>
+    </chunk>
+   </chunks>
+   <transformations>
+    <transformation>
+     <type>x-shift</type>
+     <offset>-149</offset>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <offset>-5</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
+  <layer>
+   <name>Altitude Text</name>
+   <type>text</type>
+   <point-size>16</point-size>
+   <color>
+    <red>1.0</red>
+    <green>1.0</green>
+    <blue>1.0</blue>
+   </color>
+   <chunks>
+    <chunk>
+     <type>number-value</type>
+     <property>/position/altitude-ft</property>
+     <format>%05.0f</format>
+    </chunk>
+   </chunks>
+   <transformations>
+    <transformation>
+     <type>x-shift</type>
+     <offset>116</offset>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <offset>105</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
+
+   <layer>
+    <name>VSI</name>
+    <texture>
+     <path>Aircraft/NTPS/Instruments/Textures/P1000bezel.rgb</path>
+     <x1>0.599</x1>
+     <y1>0.885</y1>
+     <x2>0.720</x2>
+     <y2>0.908</y2>
+    </texture>
+    <w>120</w>
+    <h>18</h>
+    <transformations>
+     <transformation>
+      <type>x-shift</type>
+      <offset>178</offset>
+     </transformation>
+     <transformation>
+      <type>y-shift</type>
+      <offset>-100</offset>
+     </transformation>      
+    <transformation>
+     <type>rotation</type>
+     <property>/autopilot/internal/vert-speed-fpm</property>
+     <min>-4000.0</min>
+     <max>4000.0</max>
+     <scale>1.0</scale>
+     <offset>0</offset>
+     <interpolation>
+      <entry><ind>  -4000.0</ind><dep>-82</dep></entry>
+      <entry><ind>  -3000.0</ind><dep>-62</dep></entry>
+      <entry><ind>  -2000.0</ind><dep> -41</dep></entry>
+      <entry><ind>   -1000.0</ind><dep> -20.5</dep></entry>
+      <entry><ind>      0.0</ind><dep>   0.0</dep></entry>
+      <entry><ind>    1000.0</ind><dep>  20.5</dep></entry>
+      <entry><ind>   2000.0</ind><dep>  41</dep></entry>
+      <entry><ind>   3000.0</ind><dep> 62</dep></entry>
+      <entry><ind>   4000.0</ind><dep> 82</dep></entry>
+     </interpolation>     
+    </transformation>
+   </transformations>
+  </layer>
+ </layers>   
+ </PropertyList>
