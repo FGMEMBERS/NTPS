@@ -38,14 +38,6 @@ NR/MD YF23 simulation config.
    <path>Aircraft/YF-23/Sounds/YF-23-sound.xml</path>
   </sound>
 
-  <panel>
-   <!-- <path>Aircraft/NTPS/Panels/737-ifr-panel.xml</path> -->
-   <path>Aircraft/NTPS/Panels/test-panel.xml</path>
-  </panel>
-  <!-- <panel_2>
-   <path>Aircraft/YF-23/Panels/YF-23-mini-panel.xml</path>
-  </panel_2> -->
-
   <hud>
    <path n="1">Huds/NTPS.xml</path>
    <visibility n="1">true</visibility>

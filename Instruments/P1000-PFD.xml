@@ -11,10 +11,10 @@
    <h>750</h>
    <texture>
     <path>Aircraft/NTPS/Instruments/Textures/P1000bezel.rgb</path>
-    <x1>0.823</x1>
-    <x2>0.924</x2>
-    <y1>0.210</y1>
-    <y2>0.791</y2>
+    <x1>0.776</x1>
+    <x2>0.918</x2>
+    <y1>0.095</y1>
+    <y2>0.908</y2>
    </texture>
    <transformations>
      <transformation>       
@@ -31,9 +31,9 @@
     <transformation>
      <type>y-shift</type>
      <property>/orientation/pitch-deg</property>
-     <min>-30.0</min>
-     <max>30.0</max>
-     <scale>-2.7</scale>
+     <min>-90.0</min>
+     <max>90.0</max>
+     <scale>-3.3</scale>
      <offset>0</offset>
     </transformation>
    </transformations>
@@ -44,13 +44,13 @@
       <name>compass rose</name>
        <texture>
 	<path>Aircraft/NTPS/Instruments/Textures/P1000bezel.rgb</path>
-	<x1>0.515</x1>
-	<y1>0.016</y1>
-	<x2>0.735</x2>
-	<y2>0.236</y2>
+	<x1>0.264</x1>
+	<y1>0.017</y1>
+	<x2>0.484</x2>
+	<y2>0.237</y2>
       </texture>
-      <w>155</w>
-      <h>155</h>
+      <w>156</w>
+      <h>156</h>
      <transformations>
      <transformation>       
       <type>y-shift</type>
@@ -174,15 +174,19 @@
      <property>/velocities/mach</property>
      <format>%1.3f</format>
     </chunk>
+	   <chunk>
+      <type>literal</type>
+      <text>M</text>
+    </chunk>
    </chunks>
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>-149</offset>
+     <offset>-150</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-5</offset>
+     <offset>0</offset>
     </transformation>
    </transformations>
   </layer>
@@ -215,6 +219,126 @@
    </transformations>
   </layer>
 
+  <layer>
+   <name>INHG Text</name>
+   <type>text</type>
+   <point-size>14</point-size>
+   <color>
+    <red>1.0</red>
+    <green>1.0</green>
+    <blue>1.0</blue>
+   </color>
+   <chunks>
+    <chunk>
+     <type>number-value</type>
+     <property>/instrumentation/altimeter/setting-inhg</property>
+     <format>%2.2f</format>
+    </chunk>
+	  <chunk>
+      <type>literal</type>
+      <text>IN</text>
+    </chunk>
+   </chunks>
+   <transformations>
+    <transformation>
+     <type>x-shift</type>
+     <offset>115</offset>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <offset>0</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
+ <layer>
+   <name>GSPD Text</name>
+   <type>text</type>
+   <point-size>14</point-size>
+   <color>
+    <red>1.0</red>
+    <green>1.0</green>
+    <blue>1.0</blue>
+   </color>
+   <chunks>
+	  <chunk>
+      <type>literal</type>
+      <text>GSPD
+    KTS</text>
+    </chunk>
+   </chunks>
+   <transformations>
+    <transformation>
+     <type>x-shift</type>
+     <offset>65</offset>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <offset>-160</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
+ <layer>
+   <name>GSPD Value</name>
+   <type>text</type>
+   <point-size>14</point-size>
+   <color>
+    <red>0.4</red>
+    <green>1.0</green>
+    <blue>0.2</blue>
+   </color>
+   <chunks>
+    <chunk>
+     <type>number-value</type>
+     <property>/instrumentation/gps/indicated-ground-speed-kt</property>
+     <format>%03.0f</format>
+    </chunk>
+   </chunks>
+   <transformations>
+    <transformation>
+     <type>x-shift</type>
+     <offset>65</offset>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <offset>-174</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
+
+
+ <layer>
+   <name>VSI Text</name>
+   <type>text</type>
+   <point-size>14</point-size>
+   <color>
+    <red>0.4</red>
+    <green>0.8</green>
+    <blue>0.0</blue>
+   </color>
+   <chunks>
+    <chunk>
+     <type>number-value</type>
+     <property>/autopilot/internal/vert-speed-fpm</property>
+     <format>%04.0f</format>
+    </chunk>
+   </chunks>
+   <transformations>
+    <transformation>
+     <type>x-shift</type>
+     <offset>120</offset>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <offset>-104</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
+
+
 
    <layer>
     <name>VSI</name>
@@ -222,10 +346,10 @@
      <path>Aircraft/NTPS/Instruments/Textures/P1000bezel.rgb</path>
      <x1>0.599</x1>
      <y1>0.885</y1>
-     <x2>0.720</x2>
+     <x2>0.659</x2>
      <y2>0.908</y2>
     </texture>
-    <w>120</w>
+    <w>60</w>
     <h>18</h>
     <transformations>
      <transformation>
@@ -255,6 +379,10 @@
       <entry><ind>   4000.0</ind><dep> 82</dep></entry>
      </interpolation>     
     </transformation>
+ <transformation>
+      <type>x-shift</type>
+      <offset>-30</offset>
+     </transformation>
    </transformations>
   </layer>
  </layers>   
