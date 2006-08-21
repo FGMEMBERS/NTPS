@@ -15,7 +15,7 @@ NR/MD YF23 simulation config.
   <aero>YF-23-yasim</aero>
   <fuel-fraction>1.0</fuel-fraction>
 
-  <description>Northrop/McDonnell Douglas YF-23 ATF prototype (YASim FDM)</description>
+  <description>NTPS Base Aircraft Configuration</description>
 
   <virtual-cockpit archive="y">false</virtual-cockpit>
 

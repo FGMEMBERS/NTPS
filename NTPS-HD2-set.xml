@@ -1,14 +1,8 @@
 <?xml version="1.0"?>
-<!--
-************************************************************************
-NR/MD YF23 simulation config.
-
-2003-08-25 Lee Elliott
-************************************************************************
--->
 
 <PropertyList include="NTPS-base.xml">
  <sim>
+  <description>NTPS Heads Down Display Option #2</description>
   <panel>
    <path>Aircraft/NTPS/Panels/NTPS-panel-2.xml</path>
    <visibility archive="y">true</visibility>

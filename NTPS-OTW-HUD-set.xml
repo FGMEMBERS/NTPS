@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
 
-<!-- NTPS Heads Down Panel Option #1 -->
-
 <PropertyList include="NTPS-base.xml">
  <sim>
+  <description>NTPS OTW + HUD</description>
   <hud>
    <path n="1">Huds/NTPS.xml</path>
    <visibility n="1">true</visibility>
