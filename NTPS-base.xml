@@ -1,11 +1,4 @@
 <?xml version="1.0"?>
-<!--
-************************************************************************
-NR/MD YF23 simulation config.
-
-2003-08-25 Lee Elliott
-************************************************************************
--->
 
 <PropertyList>
  <sim>
@@ -16,6 +9,11 @@ NR/MD YF23 simulation config.
   <fuel-fraction>1.0</fuel-fraction>
 
   <description>NTPS Base Aircraft Configuration</description>
+
+  <startup>
+   <splash-texture>Aircraft/NTPS/NTPS-Logo1.rgb</splash-texture>
+  </startup>
+
 
   <virtual-cockpit archive="y">false</virtual-cockpit>
 
