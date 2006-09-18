@@ -686,11 +686,12 @@
   <layer>
    <name>Airspeed Text</name>
    <type>text</type>
-   <point-size>16</point-size>
+  <font>helvetica_bold</font>
+<point-size>16</point-size>
    <color>
-    <red>1.0</red>
-    <green>1.0</green>
-    <blue>1.0</blue>
+    <red>0.8</red>
+    <green>0.8</green>
+    <blue>0.8</blue>
    </color>
    <chunks>
     <chunk>
@@ -715,12 +716,13 @@
   <layer>
    <name>Mach Text</name>
    <type>text</type>
-   <point-size>14</point-size>
-   <color>
-    <red>0.4</red>
+  <font>helvetica_bold</font>
+  <point-size>12</point-size>
+  <color>
+    <red>0.1</red>
     <green>0.8</green>
-    <blue>0.0</blue>
-   </color>
+    <blue>0.3</blue>
+  </color>
    <chunks>
     <chunk>
      <type>number-value</type>
@@ -747,11 +749,12 @@
   <layer>
    <name>Altitude Text</name>
    <type>text</type>
+  <font>helvetica_bold</font>
    <point-size>16</point-size>
    <color>
-    <red>1.0</red>
-    <green>1.0</green>
-    <blue>1.0</blue>
+    <red>0.8</red>
+    <green>0.8</green>
+    <blue>0.8</blue>
    </color>
    <chunks>
     <chunk>
@@ -775,11 +778,12 @@
   <layer>
    <name>INHG Text</name>
    <type>text</type>
-   <point-size>14</point-size>
+  <font>helvetica_bold</font>
+  <point-size>12</point-size>
    <color>
-    <red>1.0</red>
-    <green>1.0</green>
-    <blue>1.0</blue>
+    <red>0.8</red>
+    <green>0.8</green>
+    <blue>0.8</blue>
    </color>
    <chunks>
     <chunk>
@@ -807,11 +811,12 @@
  <layer>
    <name>GSPD Text</name>
    <type>text</type>
-   <point-size>14</point-size>
+  <font>helvetica_bold</font>
+  <point-size>12</point-size>
    <color>
-    <red>1.0</red>
-    <green>1.0</green>
-    <blue>1.0</blue>
+    <red>0.8</red>
+    <green>0.8</green>
+    <blue>0.8</blue>
    </color>
    <chunks>
 	  <chunk>
@@ -823,7 +828,7 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>65</offset>
+     <offset>68</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
@@ -835,23 +840,25 @@
  <layer>
    <name>GSPD Value</name>
    <type>text</type>
-   <point-size>14</point-size>
-   <color>
-    <red>0.4</red>
-    <green>1.0</green>
-    <blue>0.2</blue>
-   </color>
+  <font>helvetica_bold</font>
+  <point-size>14</point-size>
+  <color>
+    <red>0.1</red>
+    <green>0.8</green>
+    <blue>0.3</blue>
+  </color>
    <chunks>
-    <chunk>
-     <type>number-value</type>
-     <property>/instrumentation/gps/indicated-ground-speed-kt</property>
-     <format>%03.0f</format>
+   <chunk>
+   <type>number-value</type>
+   <property>/velocities/uBody-fps</property>
+   <scale>0.5921</scale>
+    <format>%3.0f</format>
     </chunk>
    </chunks>
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>65</offset>
+     <offset>64</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
@@ -865,17 +872,18 @@
  <layer>
    <name>VSI Text</name>
    <type>text</type>
-   <point-size>14</point-size>
-   <color>
-    <red>0.4</red>
+  <font>helvetica_bold</font>
+  <point-size>14</point-size>
+  <color>
+    <red>0.1</red>
     <green>0.8</green>
-    <blue>0.0</blue>
-   </color>
+    <blue>0.3</blue>
+  </color>
    <chunks>
     <chunk>
      <type>number-value</type>
      <property>/autopilot/internal/vert-speed-fpm</property>
-     <format>%04.0f</format>
+     <format>%4.0f</format>
     </chunk>
    </chunks>
    <transformations>
@@ -885,7 +893,7 @@
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-104</offset>
+     <offset>-105</offset>
     </transformation>
    </transformations>
   </layer>
@@ -938,5 +946,117 @@
      </transformation>
    </transformations>
   </layer>
+  
+<!-- Autopilot info-->
+
+<layer>
+  <name>Selected Alt-text</name>
+  <condition>
+  <equals>
+  <property>/autopilot/locks/altitude</property>
+  <value>altitude-hold</value>
+  </equals>
+  </condition>
+  <type>text</type>
+  <font>helvetica_bold</font>
+  <point-size>16</point-size>
+  <color>
+    <red>0.5</red>
+    <green>0.8</green>
+    <blue>0.9</blue>
+  </color>
+  <chunks>
+   <chunk>
+   <type>number-value</type>
+   <property>/autopilot/settings/target-altitude-ft</property>
+    <format>%5.0f</format>
+    </chunk>
+  </chunks>
+  <transformations>
+    <transformation>
+      <type>x-shift</type>
+      <offset>116</offset>
+    </transformation>
+    <transformation>
+      <type>y-shift</type>
+      <offset>220</offset>
+    </transformation>
+  </transformations>
+</layer>
+  
+ <layer>
+   <name>HGD annun</name>
+  <condition>
+  <equals>
+  <property>/autopilot/locks/heading</property>
+  <value>dg-heading-hold</value>
+  </equals>
+  </condition>
+   <type>text</type>
+  <font>helvetica_bold</font>
+  <point-size>12</point-size>
+   <color>
+    <red>0.8</red>
+    <green>0.8</green>
+    <blue>0.8</blue>
+   </color>
+   <chunks>
+	  <chunk>
+      <type>literal</type>
+      <text>HDG</text>
+    </chunk>
+   </chunks>
+   <transformations>
+    <transformation>
+     <type>x-shift</type>
+     <offset>-168</offset>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <offset>-160</offset>
+    </transformation>
+   </transformations>
+  </layer>  
+  
+ <layer>
+  <name>HDG bug bearing</name>
+  <condition>
+  <equals>
+  <property>/autopilot/locks/heading</property>
+  <value>dg-heading-hold</value>
+  </equals>
+  </condition>
+  <type>text</type>
+  <font>helvetica_bold</font>
+  <point-size>16</point-size>
+  <color>
+    <red>0.5</red>
+    <green>0.8</green>
+    <blue>0.9</blue>
+  </color>
+  <chunks>
+   <chunk>
+   <type>number-value</type>
+   <property>/autopilot/settings/heading-bug-deg</property>
+    <format>%03.0f</format>
+    </chunk>
+  </chunks>
+  <transformations>
+    <transformation>
+      <type>x-shift</type>
+      <offset>-168</offset>
+    </transformation>
+    <transformation>
+      <type>y-shift</type>
+      <offset>-176</offset>
+    </transformation>
+  </transformations>
+</layer> 
+  
+  
+  
+  
+  
+  
  </layers>   
  </PropertyList>
