@@ -8,4 +8,24 @@
    <visibility archive="y">true</visibility>
   </panel>
  </sim>
+ <instrumentation>
+ <wxradar>
+ <serviceable>true</serviceable>
+  <range type="int" archive="y">10</range>
+  <minimized type="bool" archive="y">false</minimized>
+  <switch archive="y">off</switch>
+  <mode archive="y">wx</mode>
+  <lightning type="bool" archive="y">true</lightning>
+  <display-mode archive="y">arc</display-mode>
+ </wxradar>
+ 	<radar>
+		<range type="int" archive="y">10</range>
+	</radar>
+</instrumentation>
+
+<nasal>
+  <system>
+     <file>Aircraft/NTPS/system.nas</file>
+	 </system>
+    </nasal>
 </PropertyList>
