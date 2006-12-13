@@ -11,6 +11,30 @@ Curtis Olson , December 2006
  
  <instruments>
 
+  <instrument include="../Instruments/gen-elev-force.xml">
+   <name>Elevator Deflection</name>
+   <x>128</x>
+   <y>640</y>
+   <w>230</w>
+   <h>230</h>
+  </instrument>  
+
+  <instrument include="../Instruments/gen-ail-force.xml">
+   <name>Aileron Deflection</name>
+   <x>128</x>
+   <y>384</y>
+   <w>230</w>
+   <h>230</h>
+  </instrument>  
+
+  <instrument include="../Instruments/gen-rud-force.xml">
+   <name>Rudder Deflection</name>
+   <x>128</x>
+   <y>128</y>
+   <w>230</w>
+   <h>230</h>
+  </instrument>  
+
   <instrument include="../Instruments/gen-elev-defl.xml">
    <name>Elevator Deflection</name>
    <x>384</x>

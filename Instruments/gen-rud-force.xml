@@ -1,5 +1,5 @@
 <PropertyList>
- <name>Generic rudder deflection gauge</name> <!-- CHANGE HERE -->
+ <name>Generic rudder (pedal) force gauge</name> <!-- CHANGE HERE -->
  <w-base>256</w-base>
  <h-base>256</h-base>
  <layers>
@@ -29,7 +29,7 @@
    <chunks>
     <chunk>
      <type>literal</type>
-     <text>dr</text> <!-- CHANGE HERE -->
+     <text>Fr</text> <!-- CHANGE HERE -->
     </chunk>
    </chunks>
    <transformations>
@@ -57,7 +57,7 @@
    <chunks>
     <chunk>
      <type>literal</type>
-     <text>-20</text> <!-- CHANGE HERE -->
+     <text>-100</text> <!-- CHANGE HERE -->
     </chunk>
    </chunks>
    <transformations>
@@ -85,7 +85,7 @@
    <chunks>
     <chunk>
      <type>literal</type>
-     <text>20</text> <!-- CHANGE HERE -->
+     <text>100</text> <!-- CHANGE HERE -->
     </chunk>
    </chunks>
    <transformations>
@@ -141,7 +141,7 @@
    <chunks>
     <chunk>
      <type>number-value</type>
-     <property>/surface-positions/rudder-pos-deg</property> <!-- CHANGE HERE -->
+     <property>/controls/flight/rudder-force</property> <!-- CHANGE HERE -->
      <format>%5.2f</format> <!-- CHANGE HERE -->
     </chunk>
    </chunks>
@@ -171,10 +171,10 @@
    <transformations>
     <transformation>
      <type>rotation</type>
-     <property>/surface-positions/rudder-pos-deg</property> <!-- CHANGE HERE -->
-     <min>-20</min> <!-- CHANGE HERE -->
-     <max>20</max> <!-- CHANGE HERE -->
-     <scale>6.75</scale> <!-- CHANGE HERE -->
+     <property>/controls/flight/rudder-force</property> <!-- CHANGE HERE -->
+     <min>-100</min> <!-- CHANGE HERE -->
+     <max>100</max> <!-- CHANGE HERE -->
+     <scale>1.35</scale> <!-- CHANGE HERE -->
     </transformation>     
     <transformation>
      <type>y-shift</type>

@@ -8,7 +8,7 @@
    <w>256</w>
    <h>256</h>
    <texture>
-     <path>Aircraft/NTPS/Instruments/Textures/generic.rgb</path>
+     <path>Aircraft/NTPS/Instruments/Textures/generic2.rgb</path>
     <x1>0.0</x1>
     <x2>1.0</x2>
     <y1>0.0</y1>
@@ -141,7 +141,7 @@
    <chunks>
     <chunk>
      <type>number-value</type>
-     <property>/surface-positions/elevator-pos-norm</property> <!-- CHANGE HERE -->
+     <property>/surface-positions/elevator-pos-deg</property> <!-- CHANGE HERE -->
      <format>%5.2f</format> <!-- CHANGE HERE -->
     </chunk>
    </chunks>
@@ -171,7 +171,7 @@
    <transformations>
     <transformation>
      <type>rotation</type>
-     <property>/surface-positions/elevator-pos-norm</property> <!-- CHANGE HERE -->
+     <property>/surface-positions/elevator-pos-deg</property> <!-- CHANGE HERE -->
      <min>-20</min> <!-- CHANGE HERE -->
      <max>20</max> <!-- CHANGE HERE -->
      <scale>6.75</scale> <!-- CHANGE HERE -->
