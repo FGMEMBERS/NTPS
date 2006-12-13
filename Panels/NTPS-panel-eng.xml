@@ -91,6 +91,14 @@ Curtis Olson , December 2006
    <h>230</h>
   </instrument>  
 
+  <instrument include="../Instruments/gen-n.xml">
+   <name>Alpha</name>
+   <x>896</x>
+   <y>384</y>
+   <w>230</w>
+   <h>230</h>
+  </instrument>  
+
   <instrument include="../Instruments/gen-beta.xml">
    <name>Alpha</name>
    <x>896</x>
