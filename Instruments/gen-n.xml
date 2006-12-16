@@ -29,13 +29,13 @@
    <chunks>
     <chunk>
      <type>literal</type>
-     <text>n</text> <!-- CHANGE HERE -->
+     <text>Nz</text> <!-- CHANGE HERE -->
     </chunk>
    </chunks>
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>-30</offset> <!-- CHANGE HERE -->
+     <offset>-15</offset> <!-- CHANGE HERE -->
     </transformation>
     <transformation>
      <type>y-shift</type>
