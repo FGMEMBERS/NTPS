@@ -142,6 +142,7 @@
     <chunk>
      <type>number-value</type>
      <property>/orientation/side-slip-deg</property> <!-- CHANGE HERE -->
+     <scale>-1.0</scale> <!-- change in side-slip sign as reported by yasim, see bug #901 -->
      <format>%5.2f</format> <!-- CHANGE HERE -->
     </chunk>
    </chunks>
@@ -174,7 +175,7 @@
      <property>/orientation/side-slip-deg</property> <!-- CHANGE HERE -->
      <min>-10</min> <!-- CHANGE HERE -->
      <max>10</max> <!-- CHANGE HERE -->
-     <scale>13.5</scale> <!-- CHANGE HERE -->
+     <scale>-13.5</scale> <!-- CHANGE HERE -->
     </transformation>     
     <transformation>
      <type>y-shift</type>
