@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<PropertyList include="NTPS-base.xml">
+ <sim>
+  <description>NTPS Heads Down Display Option #1</description>
+  <panel>
+   <path>Aircraft/NTPS/Panels/NTPS-panel-1.xml</path>
+   <visibility archive="y">true</visibility>
+  </panel>
+ </sim>
+</PropertyList>

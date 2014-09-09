@@ -1,0 +1,880 @@
+ <PropertyList>
+ <name>P1000-MFD Radar</name>
+ <w-base>334</w-base>
+ <h-base>334</h-base>
+
+<layers>
+ 
+<!--   AI Radar echos    -->
+
+<layer>
+  <name>AI-0</name>
+  <condition>
+   <property>/instrumentation/radar/ai[0]/active</property>
+   <less-than>
+   <property>/instrumentation/radar/ai[0]/norm-dist</property>
+   <value>1.000</value>
+   </less-than>
+  </condition>
+  <type>text</type>
+  <font>default</font>
+  <point-size>8</point-size>
+  <color>
+    <red>0.8</red>
+    <green>0.8</green>
+    <blue>0.8</blue>
+  </color>
+  <chunks>
+   <chunk>
+  <type>literal</type>
+  <text>. </text>
+    </chunk>
+   <chunk>
+  <type>text-value</type>
+  <property>/instrumentation/radar/ai[0]/id</property>
+    </chunk>
+  </chunks>
+  <transformations>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/ai[0]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>1.0</scale>
+	  </transformation>
+	 <transformation>
+      <type>y-shift</type>
+      <property>/instrumentation/radar/ai[0]/norm-dist</property>
+    	  <scale>160.0</scale>
+		  </transformation>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/ai[0]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>-1.0</scale>
+	  </transformation>
+</transformations>
+</layer>
+
+<layer>
+  <name>AI-1</name>
+  <condition>
+   <property>/instrumentation/radar/ai[1]/active</property>
+   <less-than>
+   <property>/instrumentation/radar/ai[1]/norm-dist</property>
+   <value>1.000</value>
+   </less-than>
+  </condition>
+  <type>text</type>
+  <font>default</font>
+  <point-size>8</point-size>
+  <color>
+    <red>0.8</red>
+    <green>0.8</green>
+    <blue>0.8</blue>
+  </color>
+  <chunks>
+   <chunk>
+  <type>literal</type>
+  <text>. </text>
+    </chunk>
+   <chunk>
+  <type>text-value</type>
+  <property>/instrumentation/radar/ai[1]/id</property>
+    </chunk>
+  </chunks>
+  <transformations>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/ai[1]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>1.0</scale>
+	  </transformation>
+	 <transformation>
+      <type>y-shift</type>
+      <property>/instrumentation/radar/ai[1]/norm-dist</property>
+    	  <scale>140.0</scale>
+		  </transformation>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/ai[1]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>-1.0</scale>
+	  </transformation>
+</transformations>
+</layer>
+
+<layer>
+  <name>AI-2</name>
+  <condition>
+   <property>/instrumentation/radar/ai[2]/active</property>
+   <less-than>
+   <property>/instrumentation/radar/ai[2]/norm-dist</property>
+   <value>1.000</value>
+   </less-than>
+  </condition>
+  <type>text</type>
+  <font>default</font>
+  <point-size>8</point-size>
+  <color>
+    <red>0.8</red>
+    <green>0.8</green>
+    <blue>0.8</blue>
+  </color>
+  <chunks>
+   <chunk>
+  <type>literal</type>
+  <text>. </text>
+    </chunk>
+   <chunk>
+  <type>text-value</type>
+  <property>/instrumentation/radar/ai[2]/id</property>
+    </chunk>
+  </chunks>
+  <transformations>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/ai[2]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>1.0</scale>
+	  </transformation>
+	 <transformation>
+      <type>y-shift</type>
+      <property>/instrumentation/radar/ai[2]/norm-dist</property>
+    	  <scale>160.0</scale>
+		  </transformation>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/ai[2]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>-1.0</scale>
+	  </transformation>
+</transformations>
+</layer>
+
+<layer>
+  <name>AI-3</name>
+  <condition>
+   <property>/instrumentation/radar/ai[3]/active</property>
+   <less-than>
+   <property>/instrumentation/radar/ai[3]/norm-dist</property>
+   <value>1.000</value>
+   </less-than>
+  </condition>
+  <type>text</type>
+  <font>default</font>
+  <point-size>8</point-size>
+  <color>
+    <red>0.8</red>
+    <green>0.8</green>
+    <blue>0.8</blue>
+  </color>
+  <chunks>
+   <chunk>
+  <type>literal</type>
+  <text>. </text>
+    </chunk>
+   <chunk>
+  <type>text-value</type>
+  <property>/instrumentation/radar/ai[3]/id</property>
+    </chunk>
+  </chunks>
+  <transformations>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/ai[3]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>1.0</scale>
+	  </transformation>
+	 <transformation>
+      <type>y-shift</type>
+      <property>/instrumentation/radar/ai[3]/norm-dist</property>
+    	  <scale>160.0</scale>
+		  </transformation>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/ai[3]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>-1.0</scale>
+	  </transformation>
+</transformations>
+</layer>
+
+<layer>
+  <name>AI-4</name>
+  <condition>
+   <property>/instrumentation/radar/ai[4]/active</property>
+   <less-than>
+   <property>/instrumentation/radar/ai[4]/norm-dist</property>
+   <value>1.000</value>
+   </less-than>
+  </condition>
+  <type>text</type>
+  <font>default</font>
+  <point-size>8</point-size>
+  <color>
+    <red>0.8</red>
+    <green>0.8</green>
+    <blue>0.8</blue>
+  </color>
+  <chunks>
+   <chunk>
+  <type>literal</type>
+  <text>. </text>
+    </chunk>
+   <chunk>
+  <type>text-value</type>
+  <property>/instrumentation/radar/ai[4]/id</property>
+    </chunk>
+  </chunks>
+  <transformations>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/ai[4]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>1.0</scale>
+	  </transformation>
+	 <transformation>
+      <type>y-shift</type>
+      <property>/instrumentation/radar/ai[4]/norm-dist</property>
+    	  <scale>160.0</scale>
+		  </transformation>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/ai[4]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>-1.0</scale>
+	  </transformation>
+</transformations>
+</layer>
+
+<layer>
+  <name>AI-5</name>
+  <condition>
+   <property>/instrumentation/radar/ai[5]/active</property>
+   <less-than>
+   <property>/instrumentation/radar/ai[5]/norm-dist</property>
+   <value>1.000</value>
+   </less-than>
+  </condition>
+  <type>text</type>
+  <font>default</font>
+  <point-size>8</point-size>
+  <color>
+    <red>0.8</red>
+    <green>0.8</green>
+    <blue>0.8</blue>
+  </color>
+  <chunks>
+   <chunk>
+  <type>literal</type>
+  <text>. </text>
+    </chunk>
+   <chunk>
+  <type>text-value</type>
+  <property>/instrumentation/radar/ai[5]/id</property>
+    </chunk>
+  </chunks>
+  <transformations>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/ai[5]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>1.0</scale>
+	  </transformation>
+	 <transformation>
+      <type>y-shift</type>
+      <property>/instrumentation/radar/ai[5]/norm-dist</property>
+    	  <scale>160.0</scale>
+		  </transformation>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/ai[5]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>-1.0</scale>
+	  </transformation>
+</transformations>
+</layer>
+
+<!--   Multiplayer Radar echos    -->
+
+<layer>
+  <name>MP-0</name>
+  <condition>
+   <property>/instrumentation/radar/mp[0]/active</property>
+   <less-than>
+   <property>/instrumentation/radar/mp[0]/norm-dist</property>
+   <value>1.000</value>
+   </less-than>
+  </condition>
+  <type>text</type>
+  <font>default</font>
+  <point-size>8</point-size>
+  <color>
+    <red>0.0</red>
+    <green>0.4</green>
+    <blue>1.0</blue>
+  </color>
+  <chunks>
+   <chunk>
+  <type>literal</type>
+  <text>. </text>
+    </chunk>
+   <chunk>
+  <type>text-value</type>
+  <property>/instrumentation/radar/mp[0]/id</property>
+    </chunk>
+  </chunks>
+  <transformations>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/mp[0]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>1.0</scale>
+	  </transformation>
+	 <transformation>
+      <type>y-shift</type>
+      <property>/instrumentation/radar/mp[0]/norm-dist</property>
+    	  <scale>160.0</scale>
+		  </transformation>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/mp[0]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>-1.0</scale>
+	  </transformation>
+</transformations>
+</layer>
+
+<layer>
+  <name>MP-1</name>
+  <condition>
+   <property>/instrumentation/radar/mp[1]/active</property>
+   <less-than>
+   <property>/instrumentation/radar/mp[1]/norm-dist</property>
+   <value>1.000</value>
+   </less-than>
+  </condition>
+  <type>text</type>
+  <font>default</font>
+  <point-size>8</point-size>
+  <color>
+    <red>0.0</red>
+    <green>0.4</green>
+    <blue>1.0</blue>
+  </color>
+  <chunks>
+   <chunk>
+  <type>literal</type>
+  <text>. </text>
+    </chunk>
+   <chunk>
+  <type>text-value</type>
+  <property>/instrumentation/radar/mp[1]/id</property>
+    </chunk>
+  </chunks>
+  <transformations>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/mp[1]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>1.0</scale>
+	  </transformation>
+	 <transformation>
+      <type>y-shift</type>
+      <property>/instrumentation/radar/mp[1]/norm-dist</property>
+    	  <scale>160.0</scale>
+		  </transformation>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/mp[1]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>-1.0</scale>
+	  </transformation>
+</transformations>
+</layer>
+
+<layer>
+  <name>MP-2</name>
+  <condition>
+   <property>/instrumentation/radar/mp[2]/active</property>
+   <less-than>
+   <property>/instrumentation/radar/mp[2]/norm-dist</property>
+   <value>1.000</value>
+   </less-than>
+  </condition>
+  <type>text</type>
+  <font>default</font>
+  <point-size>8</point-size>
+  <color>
+    <red>0.0</red>
+    <green>0.4</green>
+    <blue>1.0</blue>
+  </color>
+  <chunks>
+   <chunk>
+  <type>literal</type>
+  <text>. </text>
+    </chunk>
+   <chunk>
+  <type>text-value</type>
+  <property>/instrumentation/radar/mp[2]/id</property>
+    </chunk>
+  </chunks>
+  <transformations>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/mp[2]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>1.0</scale>
+	  </transformation>
+	 <transformation>
+      <type>y-shift</type>
+      <property>/instrumentation/radar/mp[2]/norm-dist</property>
+    	  <scale>160.0</scale>
+		  </transformation>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/mp[2]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>-1.0</scale>
+	  </transformation>
+</transformations>
+</layer>
+
+<layer>
+  <name>MP-3</name>
+  <condition>
+   <property>/instrumentation/radar/mp[3]/active</property>
+   <less-than>
+   <property>/instrumentation/radar/mp[3]/norm-dist</property>
+   <value>1.000</value>
+   </less-than>
+  </condition>
+  <type>text</type>
+  <font>default</font>
+  <point-size>8</point-size>
+  <color>
+    <red>0.0</red>
+    <green>0.4</green>
+    <blue>1.0</blue>
+  </color>
+  <chunks>
+   <chunk>
+  <type>literal</type>
+  <text>. </text>
+    </chunk>
+   <chunk>
+  <type>text-value</type>
+  <property>/instrumentation/radar/mp[3]/id</property>
+    </chunk>
+  </chunks>
+  <transformations>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/mp[3]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>1.0</scale>
+	  </transformation>
+	 <transformation>
+      <type>y-shift</type>
+      <property>/instrumentation/radar/mp[3]/norm-dist</property>
+    	  <scale>160.0</scale>
+		  </transformation>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/mp[3]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>-1.0</scale>
+	  </transformation>
+</transformations>
+</layer>
+
+<layer>
+  <name>MP-4</name>
+  <condition>
+   <property>/instrumentation/radar/mp[4]/active</property>
+   <less-than>
+   <property>/instrumentation/radar/mp[4]/norm-dist</property>
+   <value>1.000</value>
+   </less-than>
+  </condition>
+  <type>text</type>
+  <font>default</font>
+  <point-size>8</point-size>
+  <color>
+    <red>0.0</red>
+    <green>0.4</green>
+    <blue>1.0</blue>
+  </color>
+  <chunks>
+   <chunk>
+  <type>literal</type>
+  <text>. </text>
+    </chunk>
+   <chunk>
+  <type>text-value</type>
+  <property>/instrumentation/radar/mp[4]/id</property>
+    </chunk>
+  </chunks>
+  <transformations>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/mp[4]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>1.0</scale>
+	  </transformation>
+	 <transformation>
+      <type>y-shift</type>
+      <property>/instrumentation/radar/mp[4]/norm-dist</property>
+    	  <scale>160.0</scale>
+		  </transformation>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/mp[4]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>-1.0</scale>
+	  </transformation>
+</transformations>
+</layer>
+
+<layer>
+  <name>MP-5</name>
+  <condition>
+   <property>/instrumentation/radar/mp[5]/active</property>
+   <less-than>
+   <property>/instrumentation/radar/mp[5]/norm-dist</property>
+   <value>1.000</value>
+   </less-than>
+  </condition>
+  <type>text</type>
+  <font>default</font>
+  <point-size>8</point-size>
+  <color>
+    <red>0.0</red>
+    <green>0.4</green>
+    <blue>1.0</blue>
+  </color>
+  <chunks>
+   <chunk>
+  <type>literal</type>
+  <text>. </text>
+    </chunk>
+   <chunk>
+  <type>text-value</type>
+  <property>/instrumentation/radar/mp[5]/id</property>
+    </chunk>
+  </chunks>
+  <transformations>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/mp[5]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>1.0</scale>
+	  </transformation>
+	 <transformation>
+      <type>y-shift</type>
+      <property>/instrumentation/radar/mp[5]/norm-dist</property>
+    	  <scale>160.0</scale>
+		  </transformation>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/mp[5]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>-1.0</scale>
+	  </transformation>
+</transformations>
+</layer>
+
+<layer>
+  <name>MP-6</name>
+  <condition>
+   <property>/instrumentation/radar/mp[6]/active</property>
+   <less-than>
+   <property>/instrumentation/radar/mp[6]/norm-dist</property>
+   <value>1.000</value>
+   </less-than>
+  </condition>
+  <type>text</type>
+  <font>default</font>
+  <point-size>8</point-size>
+  <color>
+    <red>0.0</red>
+    <green>0.4</green>
+    <blue>1.0</blue>
+  </color>
+  <chunks>
+   <chunk>
+  <type>literal</type>
+  <text>. </text>
+    </chunk>
+   <chunk>
+  <type>text-value</type>
+  <property>/instrumentation/radar/mp[6]/id</property>
+    </chunk>
+  </chunks>
+  <transformations>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/mp[6]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>1.0</scale>
+	  </transformation>
+	 <transformation>
+      <type>y-shift</type>
+      <property>/instrumentation/radar/mp[6]/norm-dist</property>
+    	  <scale>160.0</scale>
+		  </transformation>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/mp[6]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>-1.0</scale>
+	  </transformation>
+</transformations>
+</layer>
+
+<layer>
+  <name>MP-7</name>
+  <condition>
+   <property>/instrumentation/radar/mp[7]/active</property>
+   <less-than>
+   <property>/instrumentation/radar/mp[7]/norm-dist</property>
+   <value>1.000</value>
+   </less-than>
+  </condition>
+  <type>text</type>
+  <font>default</font>
+  <point-size>8</point-size>
+  <color>
+    <red>0.0</red>
+    <green>0.4</green>
+    <blue>1.0</blue>
+  </color>
+  <chunks>
+   <chunk>
+  <type>literal</type>
+  <text>. </text>
+    </chunk>
+   <chunk>
+  <type>text-value</type>
+  <property>/instrumentation/radar/mp[7]/id</property>
+    </chunk>
+  </chunks>
+  <transformations>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/mp[7]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>1.0</scale>
+	  </transformation>
+	 <transformation>
+      <type>y-shift</type>
+      <property>/instrumentation/radar/mp[7]/norm-dist</property>
+    	  <scale>160.0</scale>
+		  </transformation>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/mp[7]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>-1.0</scale>
+	  </transformation>
+</transformations>
+</layer>
+
+<layer>
+  <name>MP-8</name>
+  <condition>
+   <property>/instrumentation/radar/mp[8]/active</property>
+   <less-than>
+   <property>/instrumentation/radar/mp[8]/norm-dist</property>
+   <value>1.000</value>
+   </less-than>
+  </condition>
+  <type>text</type>
+  <font>default</font>
+  <point-size>8</point-size>
+  <color>
+    <red>0.0</red>
+    <green>0.4</green>
+    <blue>1.0</blue>
+  </color>
+  <chunks>
+   <chunk>
+  <type>literal</type>
+  <text>. </text>
+    </chunk>
+   <chunk>
+  <type>text-value</type>
+  <property>/instrumentation/radar/mp[8]/id</property>
+    </chunk>
+  </chunks>
+  <transformations>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/mp[8]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>1.0</scale>
+	  </transformation>
+	 <transformation>
+      <type>y-shift</type>
+      <property>/instrumentation/radar/mp[8]/norm-dist</property>
+    	  <scale>160.0</scale>
+		  </transformation>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/mp[8]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>-1.0</scale>
+	  </transformation>
+</transformations>
+</layer>
+
+<layer>
+  <name>MP-9</name>
+  <condition>
+   <property>/instrumentation/radar/mp[9]/active</property>
+   <less-than>
+   <property>/instrumentation/radar/mp[9]/norm-dist</property>
+   <value>1.000</value>
+   </less-than>
+  </condition>
+  <type>text</type>
+  <font>default</font>
+  <point-size>8</point-size>
+  <color>
+    <red>0.0</red>
+    <green>0.4</green>
+    <blue>1.0</blue>
+  </color>
+  <chunks>
+   <chunk>
+  <type>literal</type>
+  <text>. </text>
+    </chunk>
+   <chunk>
+  <type>text-value</type>
+  <property>/instrumentation/radar/mp[9]/id</property>
+    </chunk>
+  </chunks>
+  <transformations>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/mp[9]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>1.0</scale>
+	  </transformation>
+	 <transformation>
+      <type>y-shift</type>
+      <property>/instrumentation/radar/mp[9]/norm-dist</property>
+    	  <scale>160.0</scale>
+		  </transformation>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/mp[9]/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>-1.0</scale>
+	  </transformation>
+</transformations>
+</layer>
+
+<!--       Route Manager Waypoint      -->
+
+<layer>
+  <name>WPT-0</name>
+  <condition>
+  <greater-than>
+   <property>autopilot/route-manager/route/num</property>
+   <value>0</value>
+   </greater-than>
+  </condition>
+  <type>text</type>
+  <font>default</font>
+  <point-size>8</point-size>
+  <color>
+    <red>1.0</red>
+    <green>0.0</green>
+    <blue>0.8</blue>
+  </color>
+  <chunks>
+   <chunk>
+  <type>literal</type>
+  <text>* </text>
+    </chunk>
+   <chunk>
+  <type>text-value</type>
+  <property>/autopilot/route-manager/wp/id</property>
+    </chunk>
+  </chunks>
+  <transformations>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/wp/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>1.0</scale>
+	  </transformation>
+	 <transformation>
+      <type>y-shift</type>
+      <property>/instrumentation/radar/wp/norm-dist</property>
+    	  <scale>160.0</scale>
+		  </transformation>
+     <transformation>       
+      <type>rotation</type>
+      <property>/instrumentation/radar/wp/brg-offset</property>
+      <min>-180.0</min>
+      <max>180.0</max>
+      <scale>-1.0</scale>
+	  </transformation>
+</transformations>
+</layer>
+
+
+</layers>
+
+<actions> 
+
+<!--<action>
+     <name>outline</name>
+     <button></button>
+     <x>-100</x>
+     <y>-100</y>
+     <w>200</w>
+     <h>200</h>
+     <binding>
+    </binding>
+   </action>
+   -->
+</actions>
+ </PropertyList>

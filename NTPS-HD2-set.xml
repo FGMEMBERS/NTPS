@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<PropertyList include="NTPS-base.xml">
+ <sim>
+  <description>NTPS Heads Down Display Option #2</description>
+  <panel>
+   <path>Aircraft/NTPS/Panels/NTPS-panel-2.xml</path>
+   <visibility archive="y">true</visibility>
+  </panel>
+ </sim>
+ <instrumentation>
+  <wxradar>
+   <serviceable>true</serviceable>
+   <range type="int" archive="y">10</range>
+   <minimized type="bool" archive="y">false</minimized>
+   <switch archive="y">off</switch>
+   <mode archive="y">wx</mode>
+   <lightning type="bool" archive="y">true</lightning>
+   <display-mode archive="y">arc</display-mode>
+  </wxradar>
+  <radar>
+   <range type="int" archive="y">10</range>
+  </radar>
+ </instrumentation>
+
+ <nasal>
+  <system>
+   <file>Aircraft/NTPS/Nasal/system.nas</file>
+  </system>
+ </nasal>
+</PropertyList>

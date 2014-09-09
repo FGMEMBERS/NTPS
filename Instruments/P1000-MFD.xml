@@ -1,0 +1,459 @@
+ <PropertyList>
+ <name>P1000-MFD</name>
+ <w-base>438</w-base>
+ <h-base>570</h-base>
+
+<layers>
+
+    <layer>
+      <name>compass rose</name>
+       <texture>
+	<path>Aircraft/NTPS/Instruments/Textures/P1000mfd.rgb</path>
+	<x1>0.569</x1>
+	<y1>0.570</y1>
+	<x2>0.995</x2>
+	<y2>0.996</y2>
+      </texture>
+	  <emissive>true</emissive>
+      <w>334</w>
+      <h>334</h>
+     <transformations>
+     <transformation>       
+      <type>y-shift</type>
+      <offset>48</offset>
+     </transformation>      
+      <transformation>
+      <type>rotation</type>
+      <property>/orientation/heading-deg</property>
+      <min>-360.0</min>
+      <max>360.0</max>
+      <scale>-1.0</scale>
+      </transformation>
+    </transformations>
+   </layer>
+
+ <layer>
+      <name>bezel</name>
+       <texture>
+	<path>Aircraft/NTPS/Instruments/Textures/P1000mfd.rgb</path>
+	<x1>0.006</x1>
+	<y1>0.253</y1>
+	<x2>0.566</x2>
+	<y2>0.994</y2>
+      </texture>
+      <w>438</w>
+      <h>570</h>
+     </layer>
+
+
+    <layer>
+      <name>bird</name>
+       <texture>
+	<path>Aircraft/NTPS/Instruments/Textures/P1000mfd.rgb</path>
+	<x1>0.679</x1>
+	<y1>0.680</y1>
+	<x2>0.885</x2>
+	<y2>0.886</y2>
+      </texture>
+      <w>160</w>
+      <h>160</h>
+	  <emissive>true</emissive>
+     <transformations>
+     <transformation>       
+      <type>y-shift</type>
+      <offset>48</offset>
+     </transformation>      
+    </transformations>
+   </layer>
+
+<layer>
+  <name>radar-range-text</name>
+  <type>text</type>
+  <font>helvetica_bold</font>
+  <point-size>12</point-size>
+  <color>
+    <red>0.8</red>
+    <green>0.8</green>
+    <blue>0.8</blue>
+  </color>
+  <chunks>
+   <chunk>
+   <type>number-value</type>
+   <property>/instrumentation/radar/range</property>
+    <scale>0.5</scale>
+	<format>%3.0f</format>
+    </chunk>
+   <chunk>
+   <type>literal</type>
+   <text>                      </text>
+    </chunk> 
+   <chunk>
+   <type>number-value</type>
+   <property>/instrumentation/radar/range</property>
+    <scale>0.5</scale>
+	<format>%3.0f</format>
+    </chunk>
+  </chunks>
+  <transformations>
+    <transformation>
+      <type>x-shift</type>
+      <offset>-92</offset>
+    </transformation>
+    <transformation>
+      <type>y-shift</type>
+      <offset>43</offset>
+    </transformation>
+  </transformations>
+</layer>
+
+
+
+<layer>
+  <name>hdg-text</name>
+  <type>text</type>
+  <font>helvetica_bold</font>
+  <point-size>15</point-size>
+  <color>
+    <red>0.1</red>
+    <green>0.9</green>
+    <blue>0.3</blue>
+  </color>
+  <chunks>
+   <chunk>
+   <type>number-value</type>
+   <property>/orientation/heading-deg</property>
+    <format>%03.0f</format>
+    </chunk>
+  </chunks>
+  <transformations>
+    <transformation>
+      <type>x-shift</type>
+      <offset>-15</offset>
+    </transformation>
+    <transformation>
+      <type>y-shift</type>
+      <offset>224</offset>
+    </transformation>
+  </transformations>
+</layer>
+
+<layer>
+  <name>FMS-text</name>
+  <condition>
+  <greater-than>
+  <property>/autopilot/route-manager/route/num</property>
+  <value>0</value>
+  </greater-than>
+  </condition>
+  <type>text</type>
+  <font>helvetica_bold</font>
+  <point-size>12</point-size>
+  <color>
+    <red>0.9</red>
+    <green>0.2</green>
+    <blue>0.7</blue>
+  </color>
+  <chunks>
+   <chunk>
+   <type>literal</type>
+   <text> FMS</text>
+    </chunk>
+  </chunks>
+  <transformations>
+    <transformation>
+      <type>x-shift</type>
+      <offset>136</offset>
+    </transformation>
+    <transformation>
+      <type>y-shift</type>
+      <offset>232</offset>
+    </transformation>
+  </transformations>
+</layer>
+
+<layer>
+  <name>FMS-dist</name>
+  <condition>
+  <greater-than>
+  <property>/autopilot/route-manager/route/num</property>
+  <value>0</value>
+  </greater-than>
+  </condition>
+  <type>text</type>
+  <font>helvetica_bold</font>
+  <point-size>12</point-size>
+  <color>
+    <red>0.9</red>
+    <green>0.2</green>
+    <blue>0.7</blue>
+  </color>
+  <chunks>
+   <chunk>
+   <type>number-value</type>
+   <property>/autopilot/route-manager/wp/dist</property>
+   <format>%03.1f</format>
+    </chunk>
+   <chunk>
+   <type>literal</type>
+   <text>NM</text>
+    </chunk>
+  </chunks>
+  <transformations>
+    <transformation>
+      <type>x-shift</type>
+      <offset>116</offset>
+    </transformation>
+    <transformation>
+      <type>y-shift</type>
+      <offset>217</offset>
+    </transformation>
+  </transformations>
+</layer>
+
+<layer>
+  <name>FMS-ID</name>
+  <condition>
+  <greater-than>
+  <property>/autopilot/route-manager/route/num</property>
+  <value>0</value>
+  </greater-than>
+  </condition>
+  <type>text</type>
+  <font>helvetica_bold</font>
+  <point-size>12</point-size>
+  <color>
+    <red>0.9</red>
+    <green>0.2</green>
+    <blue>0.7</blue>
+  </color>
+  <chunks>
+   <chunk>
+   <type>text-value</type>
+   <property>/autopilot/route-manager/wp/id</property>
+    </chunk>
+  </chunks>
+  <transformations>
+    <transformation>
+      <type>x-shift</type>
+      <offset>136</offset>
+    </transformation>
+    <transformation>
+      <type>y-shift</type>
+      <offset>201</offset>
+    </transformation>
+  </transformations>
+</layer>
+
+<layer>
+  <name>FMS-ETA</name>
+  <condition>
+  <greater-than>
+  <property>/autopilot/route-manager/route/num</property>
+  <value>0</value>
+  </greater-than>
+  </condition>
+  <type>text</type>
+  <font>helvetica_bold</font>
+  <point-size>12</point-size>
+  <color>
+    <red>0.9</red>
+    <green>0.2</green>
+    <blue>0.7</blue>
+  </color>
+  <chunks>
+   <chunk>
+   <type>text-value</type>
+   <property>/autopilot/route-manager/wp/eta</property>
+    </chunk>
+  </chunks>
+  <transformations>
+    <transformation>
+      <type>x-shift</type>
+      <offset>136</offset>
+    </transformation>
+    <transformation>
+      <type>y-shift</type>
+      <offset>186</offset>
+    </transformation>
+  </transformations>
+</layer>
+
+
+<layer>
+  <name>MFD-tas</name>
+  <type>text</type>
+  <font>helvetica_bold</font>
+  <point-size>12</point-size>
+  <color>
+    <red>0.8</red>
+    <green>0.8</green>
+    <blue>0.8</blue>
+  </color>
+  <chunks>
+   <chunk>
+   <type>literal</type>
+   <text>TAS
+
+GSPD
+</text>
+    </chunk>
+  </chunks>
+  <transformations>
+    <transformation>
+      <type>x-shift</type>
+      <offset>134</offset>
+    </transformation>
+    <transformation>
+      <type>y-shift</type>
+      <offset>-90</offset>
+    </transformation>
+  </transformations>
+</layer>
+
+<layer>
+  <name>tas-text</name>
+  <type>text</type>
+  <font>helvetica_bold</font>
+  <point-size>12</point-size>
+  <color>
+    <red>0.1</red>
+    <green>0.8</green>
+    <blue>0.3</blue>
+  </color>
+  <chunks>
+   <chunk>
+   <type>number-value</type>
+   <property>/velocities/airspeed-kt</property>
+    <format>%3.1f</format>
+    </chunk>
+  </chunks>
+  <transformations>
+    <transformation>
+      <type>x-shift</type>
+      <offset>136</offset>
+    </transformation>
+    <transformation>
+      <type>y-shift</type>
+      <offset>-102</offset>
+    </transformation>
+  </transformations>
+</layer>
+
+<layer>
+  <name>gspd-text</name>
+  <type>text</type>
+  <font>helvetica_bold</font>
+  <point-size>12</point-size>
+  <color>
+    <red>0.9</red>
+    <green>0.2</green>
+    <blue>0.7</blue>
+  </color>
+  <chunks>
+   <chunk>
+   <type>number-value</type>
+   <property>/velocities/uBody-fps</property>
+   <scale>0.5921</scale>
+    <format>%3.1f</format>
+    </chunk>
+  </chunks>
+  <transformations>
+    <transformation>
+      <type>x-shift</type>
+      <offset>136</offset>
+    </transformation>
+    <transformation>
+      <type>y-shift</type>
+      <offset>-126</offset>
+    </transformation>
+  </transformations>
+</layer>
+
+<!-- Autopilot info-->
+
+<layer>
+  <name>Selected Alt-annun</name>
+  <condition>
+  <equals>
+  <property>/autopilot/locks/altitude</property>
+  <value>altitude-hold</value>
+  </equals>
+  </condition>
+  <type>text</type>
+  <font>helvetica_bold</font>
+  <point-size>10</point-size>
+  <color>
+    <red>0.8</red>
+    <green>0.8</green>
+    <blue>0.8</blue>
+  </color>
+  <chunks>
+   <chunk>
+   <type>literal</type>
+   <text>ALT</text>
+    </chunk>
+  </chunks>
+  <transformations>
+    <transformation>
+      <type>x-shift</type>
+      <offset>136</offset>
+    </transformation>
+    <transformation>
+      <type>y-shift</type>
+      <offset>-168</offset>
+    </transformation>
+  </transformations>
+</layer>
+
+<layer>
+  <name>Selected Alt-text</name>
+  <condition>
+  <equals>
+  <property>/autopilot/locks/altitude</property>
+  <value>altitude-hold</value>
+  </equals>
+  </condition>
+  <type>text</type>
+  <font>helvetica_bold</font>
+  <point-size>12</point-size>
+  <color>
+    <red>0.5</red>
+    <green>0.8</green>
+    <blue>0.9</blue>
+  </color>
+  <chunks>
+   <chunk>
+   <type>number-value</type>
+   <property>/autopilot/settings/target-altitude-ft</property>
+    <format>%5.0f</format>
+    </chunk>
+  </chunks>
+  <transformations>
+    <transformation>
+      <type>x-shift</type>
+      <offset>130</offset>
+    </transformation>
+    <transformation>
+      <type>y-shift</type>
+      <offset>-180</offset>
+    </transformation>
+  </transformations>
+</layer>
+
+</layers>
+
+<actions> 
+
+<!--<action>
+     <name>outline</name>
+     <button></button>
+     <x>-100</x>
+     <y>-100</y>
+     <w>200</w>
+     <h>200</h>
+     <binding>
+    </binding>
+   </action>
+   -->
+</actions>
+ </PropertyList>

@@ -1,0 +1,40 @@
+<!--
+Fullscreen test panel
+Syd Adams , August 2006
+-->
+
+<PropertyList>
+ <name>Test Panel</name>
+ <background>Aircraft/NTPS/Panels/panel-bg2.rgb</background>
+ <w>1024</w>
+ <h>768</h>
+ 
+ <instruments>
+
+  <instrument include="../Instruments/P1000-PFD.xml">
+   <name>Primus 1000 PFD</name>
+   <x>260</x>
+   <y>384</y>
+   <w>500</w>
+   <h>653</h>
+  </instrument>
+
+<instrument include="../Instruments/P1000-MFD.xml">
+   <name>Primus 1000 MFD</name>
+   <x>764</x>
+   <y>384</y>
+   <w>500</w>
+   <h>653</h>
+  </instrument>
+  
+<instrument include="../Instruments/AI-Radar.xml">
+   <name>Primus 1000 MFD Radar</name>
+   <x>764</x>
+   <y>436</y>
+   <w>380</w>
+   <h>380</h>
+  </instrument>  
+
+ </instruments>
+
+</PropertyList>

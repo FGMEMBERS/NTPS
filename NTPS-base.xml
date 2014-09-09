@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+ <sim>
+  <flight-model>yasim</flight-model>
+  <status>beta</status>
+  <author>Lee Elliott</author>
+  <aero>YF-23-yasim</aero>
+  <fuel-fraction>1.0</fuel-fraction>
+
+  <description>NTPS Base Aircraft Configuration</description>
+
+  <startup>
+   <splash-texture>Aircraft/NTPS/NTPS-Logo1.rgb</splash-texture>
+  </startup>
+
+
+  <virtual-cockpit archive="y">false</virtual-cockpit>
+
+  <view n="0">
+   <internal archive="y">false</internal>
+   <config>
+    <x-offset-m archive="y">0.00</x-offset-m>
+    <y-offset-m archive="y">1.10</y-offset-m>
+    <z-offset-m archive="y">-5.80</z-offset-m>
+    <pitch-offset-deg>0</pitch-offset-deg>
+    <default-field-of-view-deg>55</default-field-of-view-deg>
+   </config>
+  </view>
+
+  <current-view>
+   <field-of-view>55.0</field-of-view>
+  </current-view>
+
+  <sound>
+   <path>Aircraft/YF-23/Sounds/YF-23-sound.xml</path>
+  </sound>
+
+  <model>
+   <path>Aircraft/YF-23/Models/YF-23-model.xml</path>
+  </model>
+
+  <systems>
+    <autopilot>
+      <path>Aircraft/YF-23/Systems/YF-23-autopilot.xml</path>
+    </autopilot>
+   <electrical>
+    <path>Aircraft/YF-23/Systems/YF-23-electrical.xml</path>
+   </electrical>
+  </systems>
+
+  <chase-distance-m type="double" archive="y">-30.0</chase-distance-m>
+
+<!-- Flap settings -->
+  <flaps>
+   <setting>0.00</setting>
+   <setting>0.08</setting>
+   <setting>0.16</setting>
+   <setting>0.32</setting>
+   <setting>0.48</setting>
+   <setting>0.64</setting>
+   <setting>0.82</setting>
+   <setting>1.00</setting>
+  </flaps>
+
+  <help>
+   <title>YF-23</title>
+   <key>
+    <name>d/f</name>
+    <desc>retract/extend slats</desc>
+   </key>
+   <key>
+    <name>j/k</name>
+    <desc>decrease/increase spoilers</desc>
+   </key>
+  </help>
+
+  <menubar>
+   <default>
+    <menu n="99">
+     <label>NTPS</label>
+     <enabled>true</enabled>
+     <item>
+      <label>Select Target Task</label>
+      <enabled>true</enabled>
+      <binding>
+       <command>nasal</command>
+       <script>lead_target.select_task_dialog()</script>
+      </binding>
+     </item>
+     <item>
+      <label>Reset Target Aircraft</label>
+      <enabled>true</enabled>
+      <binding>
+       <command>nasal</command>
+       <script>lead_target.reset_target_aircraft()</script>
+      </binding>
+     </item>
+    </menu>
+   </default>
+  </menubar>
+ </sim>
+
+ <input>
+  <keyboard>
+
+   <key n="100">
+    <name>d</name>
+    <desc>Retract Slats.</desc>
+    <binding>
+     <command>property-adjust</command>
+     <property>/controls/flight/slats</property>
+     <step type="double">-0.25</step>
+    </binding>
+   </key>
+
+   <key n="102">
+    <name>f</name>
+    <desc>Extend Slats.</desc>
+    <binding>
+     <command>property-adjust</command>
+     <property>/controls/flight/slats</property>
+     <step type="double">0.25</step>
+    </binding>
+   </key>
+
+  </keyboard>
+ </input>
+
+ <autopilot>
+   <lead-target>
+     <!-- enable the lead target control script by default for NTPS -->
+     <enable type="bool">true</enable>
+   </lead-target>
+
+   <settings>
+    <target-agl-ft type="float">800</target-agl-ft>
+    <target-altitude-ft type="float">3000</target-altitude-ft>
+    <target-aoa-deg type="float">11</target-aoa-deg>
+    <target-pitch-deg type="float">12</target-pitch-deg>
+    <take-off-pitch-deg type="float">13</take-off-pitch-deg>
+    <initial-climb-pitch-deg type="float">11</initial-climb-pitch-deg>
+    <ground-roll-heading-deg type="float">-999.9</ground-roll-heading-deg>
+    <target-speed-kt type="float">400.0</target-speed-kt>
+    <target-mach type="float">0.7</target-mach>
+    <target-approach-AoA-deg type="float">9.0</target-approach-AoA-deg>
+   </settings>
+
+   <locks>
+    <auto-take-off type="string">Enabled</auto-take-off>
+    <auto-landing type="string">Enabled</auto-landing>
+    <rudder-control type="string">Initialised</rudder-control>
+    <approach-AoA-lock type="string">Initialised</approach-AoA-lock>
+   </locks>
+
+ </autopilot>
+
+<!-- Start with the Parking Brake on -->
+ <controls>
+  <gear>
+   <brake-parking type="double">1.0</brake-parking>
+  </gear>
+ </controls>
+
+<!-- Engine indexes -->
+ <engines>
+  <engine n="0">
+   <engine-num type="int">0</engine-num>
+  </engine>
+  <engine n="1">
+   <engine-num type="int">1</engine-num>
+  </engine>
+ </engines>
+
+<!-- Fuel Tank indexes -->
+ <consumables>
+  <fuel>
+   <tank n="0">
+    <tank-num type="int">0</tank-num>
+   </tank>
+   <tank n="1">
+    <tank-num type="int">1</tank-num>
+   </tank>
+   <tank n="2">
+    <tank-num type="int">2</tank-num>
+   </tank>
+  </fuel>
+ </consumables>
+
+ <nasal>
+   <ntps>
+     <file>Aircraft/NTPS/Nasal/data.nas</file>
+   </ntps>
+ </nasal>
+
+</PropertyList>

@@ -1,0 +1,112 @@
+<!--
+Fullscreen Engineering Data Panel
+Curtis Olson , December 2006
+-->
+
+<PropertyList>
+ <name>Engineering Data Panel</name>
+ <background>Aircraft/NTPS/Panels/panel-bg2.rgb</background>
+ <w>1024</w>
+ <h>768</h>
+ 
+ <instruments>
+
+  <instrument include="../Instruments/gen-elev-force.xml">
+   <name>Elevator Deflection</name>
+   <x>128</x>
+   <y>640</y>
+   <w>230</w>
+   <h>230</h>
+  </instrument>  
+
+  <instrument include="../Instruments/gen-ail-force.xml">
+   <name>Aileron Deflection</name>
+   <x>128</x>
+   <y>384</y>
+   <w>230</w>
+   <h>230</h>
+  </instrument>  
+
+  <instrument include="../Instruments/gen-rud-force.xml">
+   <name>Rudder Deflection</name>
+   <x>128</x>
+   <y>128</y>
+   <w>230</w>
+   <h>230</h>
+  </instrument>  
+
+  <instrument include="../Instruments/gen-elev-defl.xml">
+   <name>Elevator Deflection</name>
+   <x>384</x>
+   <y>640</y>
+   <w>230</w>
+   <h>230</h>
+  </instrument>  
+
+  <instrument include="../Instruments/gen-ail-defl.xml">
+   <name>Aileron Deflection</name>
+   <x>384</x>
+   <y>384</y>
+   <w>230</w>
+   <h>230</h>
+  </instrument>  
+
+  <instrument include="../Instruments/gen-rud-defl.xml">
+   <name>Rudder Deflection</name>
+   <x>384</x>
+   <y>128</y>
+   <w>230</w>
+   <h>230</h>
+  </instrument>  
+
+  <instrument include="../Instruments/gen-thedot.xml">
+   <name>Pitch rate</name>
+   <x>640</x>
+   <y>640</y>
+   <w>230</w>
+   <h>230</h>
+  </instrument>  
+
+  <instrument include="../Instruments/gen-phidot.xml">
+   <name>Roll rate</name>
+   <x>640</x>
+   <y>384</y>
+   <w>230</w>
+   <h>230</h>
+  </instrument>  
+
+  <instrument include="../Instruments/gen-psidot.xml">
+   <name>Yaw rate</name>
+   <x>640</x>
+   <y>128</y>
+   <w>230</w>
+   <h>230</h>
+  </instrument>  
+
+  <instrument include="../Instruments/gen-alpha.xml">
+   <name>Alpha</name>
+   <x>896</x>
+   <y>640</y>
+   <w>230</w>
+   <h>230</h>
+  </instrument>  
+
+  <instrument include="../Instruments/gen-n.xml">
+   <name>Alpha</name>
+   <x>896</x>
+   <y>384</y>
+   <w>230</w>
+   <h>230</h>
+  </instrument>  
+
+  <instrument include="../Instruments/gen-beta.xml">
+   <name>Alpha</name>
+   <x>896</x>
+   <y>128</y>
+   <w>230</w>
+   <h>230</h>
+  </instrument>  
+
+ </instruments>
+
+</PropertyList>

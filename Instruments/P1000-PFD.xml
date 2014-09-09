@@ -1,0 +1,1062 @@
+ <PropertyList>
+ <name>P1000-PFD</name>
+ <w-base>438</w-base>
+ <h-base>570</h-base>
+
+  <layers>
+
+  <layer>
+   <name>ati</name>
+   <w>190</w>
+   <h>750</h>
+   <texture>
+    <path>Aircraft/NTPS/Instruments/Textures/P1000bezel.rgb</path>
+    <x1>0.776</x1>
+    <x2>0.918</x2>
+    <y1>0.095</y1>
+    <y2>0.908</y2>
+   </texture>
+   <transformations>
+     <transformation>       
+      <type>y-shift</type>
+      <offset>116</offset>
+     </transformation>   
+    <transformation>
+     <type>rotation</type>
+     <property>/orientation/roll-deg</property>
+     <min>-360.0</min>
+     <max>360.0</max>
+     <scale>-1</scale>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <property>/orientation/pitch-deg</property>
+     <min>-90.0</min>
+     <max>90.0</max>
+     <scale>-3.3</scale>
+     <offset>0</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
+     <layer>
+      <name>compass rose</name>
+       <texture>
+	<path>Aircraft/NTPS/Instruments/Textures/P1000bezel.rgb</path>
+	<x1>0.264</x1>
+	<y1>0.017</y1>
+	<x2>0.484</x2>
+	<y2>0.237</y2>
+      </texture>
+      <w>156</w>
+      <h>156</h>
+     <transformations>
+     <transformation>       
+      <type>y-shift</type>
+      <offset>-92</offset>
+     </transformation>      
+      <transformation>
+      <type>rotation</type>
+      <property>/orientation/heading-magnetic-deg</property>
+      <min>-360.0</min>
+      <max>360.0</max>
+      <scale>-1.0</scale>
+      <offset>-10</offset> 
+      </transformation>
+    </transformations>
+   </layer>
+
+
+
+  <layer>
+   <name>Vbars</name>
+   <w>118</w>
+   <h>40</h>
+   <texture>
+    <path>Aircraft/NTPS/Instruments/Textures/P1000bezel.rgb</path>
+    <x1>0.066</x1>
+    <x2>0.215</x2>
+    <y1>0.104</y1>
+    <y2>0.153</y2>
+   </texture>
+   <transformations>
+     <transformation>       
+      <type>y-shift</type>
+      <offset>115</offset>
+     </transformation>   
+    <transformation>
+     <type>rotation</type>
+     <property>/instrumentation/flightdirector/vbar-roll</property>
+     <min>-360.0</min>
+     <max>360.0</max>
+     <scale>-1</scale>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <property>/instrumentation/flightdirector/vbar-pitch</property>
+     <min>-90.0</min>
+     <max>90.0</max>
+     <scale>2.7</scale>
+     <offset>0</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
+
+
+
+
+  <layer>
+   <name>Airspeed tape 2</name>
+   <w>50</w>
+   <h>1079</h>
+   <texture>
+    <path>Aircraft/NTPS/Instruments/Textures/P1000bezel.rgb</path>
+    <x1>0.583</x1>
+    <x2>0.636</x2>
+    <y1>0.159</y1>
+    <y2>0.982</y2>
+   </texture>
+   <transformations>
+     <transformation>       
+      <type>y-shift</type>
+      <offset>828</offset>
+     </transformation>  
+     <transformation>       
+      <type>x-shift</type>
+      <offset>-130</offset>
+     </transformation>    
+    <transformation>
+     <type>y-shift</type>
+     <property>/velocities/airspeed-kt</property>
+     <interpolation>
+      <entry><ind>0.0</ind><dep>0</dep></entry>
+      <entry><ind>400.0</ind><dep>0</dep></entry>
+      <entry><ind>500.0</ind><dep>-207</dep></entry>
+      <entry><ind>600.0</ind><dep>-415</dep></entry>
+      <entry><ind>700.0</ind><dep>-622</dep></entry>
+      <entry><ind>800.0</ind><dep>-830</dep></entry>
+      <entry><ind>900.0</ind><dep>-1037</dep></entry>
+     </interpolation>     
+    </transformation>
+   </transformations>
+  </layer>
+
+
+
+  <layer>
+   <name>Airspeed tape 1</name>
+   <w>50</w>
+   <h>1163</h>
+   <texture>
+    <path>Aircraft/NTPS/Instruments/Textures/P1000bezel.rgb</path>
+    <x1>0.638</x1>
+    <x2>0.690</x2>
+    <y1>0.103</y1>
+    <y2>0.990</y2>
+   </texture>
+   <transformations>
+     <transformation>       
+      <type>y-shift</type>
+      <offset>588</offset>
+     </transformation>  
+     <transformation>       
+      <type>x-shift</type>
+      <offset>-130</offset>
+     </transformation>    
+    <transformation>
+     <type>y-shift</type>
+     <property>/velocities/airspeed-kt</property>
+     <interpolation>
+      <entry><ind>0.0</ind><dep>0</dep></entry>
+      <entry><ind>100.0</ind><dep>-207</dep></entry>
+      <entry><ind>200.0</ind><dep>-414</dep></entry>
+      <entry><ind>300.0</ind><dep>-621</dep></entry>
+      <entry><ind>400.0</ind><dep>-828</dep></entry>
+      <entry><ind>500.0</ind><dep>-1035</dep></entry>
+      <entry><ind>600.0</ind><dep>-1243</dep></entry>
+     </interpolation>     
+    </transformation>
+   </transformations>
+  </layer>
+
+
+  <layer>
+   <name>ALT tape 1</name>
+   <w>67</w>
+   <h>1120</h>
+   <texture>
+    <path>Aircraft/NTPS/Instruments/Textures/alt-tape.rgb</path>
+    <x1>0.922</x1>
+    <x2>0.978</x2>
+    <y1>0.0</y1>
+    <y2>0.993</y2>
+   </texture>
+   <transformations>
+     <transformation>       
+      <type>y-shift</type>
+      <offset>568</offset>
+     </transformation>  
+     <transformation>       
+      <type>x-shift</type>
+      <offset>140</offset>
+     </transformation>    
+    <transformation>
+     <type>y-shift</type>
+     <property>/position/altitude-ft</property>
+     <interpolation>
+      <entry><ind>0.0</ind><dep>0</dep></entry>
+      <entry><ind>5500.0</ind><dep>-1118</dep></entry>
+     </interpolation>     
+    </transformation>
+   </transformations>
+  </layer>
+
+  <layer>
+   <name>ALT tape 2</name>
+   <w>67</w>
+   <h>1120</h>
+   <texture>
+    <path>Aircraft/NTPS/Instruments/Textures/alt-tape.rgb</path>
+    <x1>0.865</x1>
+    <x2>0.921</x2>
+    <y1>0.0</y1>
+    <y2>0.993</y2>
+   </texture>
+   <transformations>
+     <transformation>       
+      <type>y-shift</type>
+      <offset>873</offset>
+     </transformation>  
+     <transformation>       
+      <type>x-shift</type>
+      <offset>140</offset>
+     </transformation>    
+    <transformation>
+     <type>y-shift</type>
+     <property>/position/altitude-ft</property>
+     <interpolation>
+      <entry><ind>0.0</ind><dep>0</dep></entry>
+      <entry><ind>3500.0</ind><dep>0</dep></entry>
+      <entry><ind>10500.0</ind><dep>-1423</dep></entry>
+     </interpolation>     
+    </transformation>
+   </transformations>
+</layer>
+
+
+  <layer>
+   <name>ALT tape 3</name>
+   <w>67</w>
+   <h>1120</h>
+   <texture>
+    <path>Aircraft/NTPS/Instruments/Textures/alt-tape.rgb</path>
+    <x1>0.808</x1>
+    <y1>0.0</y1>
+    <x2>0.864</x2>
+    <y2>0.993</y2>
+   </texture>
+   <transformations>
+     <transformation>       
+      <type>y-shift</type>
+      <offset>873</offset>
+     </transformation>  
+     <transformation>       
+      <type>x-shift</type>
+      <offset>140</offset>
+     </transformation>    
+    <transformation>
+     <type>y-shift</type>
+     <property>/position/altitude-ft</property>
+     <interpolation>
+      <entry><ind>0.0</ind><dep>0</dep></entry>
+      <entry><ind>8500.0</ind><dep>0</dep></entry>
+      <entry><ind>15500.0</ind><dep>-1423</dep></entry>
+     </interpolation>     
+    </transformation>
+   </transformations>
+</layer>
+
+
+  <layer>
+   <name>ALT tape 4</name>
+   <w>67</w>
+   <h>1120</h>
+   <texture>
+    <path>Aircraft/NTPS/Instruments/Textures/alt-tape.rgb</path>
+    <x1>0.751</x1>
+    <y1>0.0</y1>
+    <x2>0.807</x2>
+    <y2>0.993</y2>
+   </texture>
+   <transformations>
+     <transformation>       
+      <type>y-shift</type>
+      <offset>873</offset>
+     </transformation>  
+     <transformation>       
+      <type>x-shift</type>
+      <offset>140</offset>
+     </transformation>    
+    <transformation>
+     <type>y-shift</type>
+     <property>/position/altitude-ft</property>
+     <interpolation>
+      <entry><ind>0.0</ind><dep>0</dep></entry>
+      <entry><ind>13500.0</ind><dep>0</dep></entry>
+      <entry><ind>20500.0</ind><dep>-1423</dep></entry>
+     </interpolation>     
+    </transformation>
+   </transformations>
+</layer>
+
+  <layer>
+   <name>ALT tape 5</name>
+   <w>67</w>
+   <h>1120</h>
+   <texture>
+    <path>Aircraft/NTPS/Instruments/Textures/alt-tape.rgb</path>
+    <x1>0.694</x1>
+    <y1>0.0</y1>
+    <x2>0.749</x2>
+    <y2>0.993</y2>
+   </texture>
+   <transformations>
+     <transformation>       
+      <type>y-shift</type>
+      <offset>873</offset>
+     </transformation>  
+     <transformation>       
+      <type>x-shift</type>
+      <offset>140</offset>
+     </transformation>    
+    <transformation>
+     <type>y-shift</type>
+     <property>/position/altitude-ft</property>
+     <interpolation>
+      <entry><ind>0.0</ind><dep>0</dep></entry>
+      <entry><ind>18500.0</ind><dep>0</dep></entry>
+      <entry><ind>25500.0</ind><dep>-1423</dep></entry>
+     </interpolation>     
+    </transformation>
+   </transformations>
+</layer>
+
+  <layer>
+   <name>ALT tape 6</name>
+   <w>67</w>
+   <h>1120</h>
+   <texture>
+    <path>Aircraft/NTPS/Instruments/Textures/alt-tape.rgb</path>
+    <x1>0.636</x1>
+    <y1>0.0</y1>
+    <x2>0.692</x2>
+    <y2>0.993</y2>
+   </texture>
+   <transformations>
+     <transformation>       
+      <type>y-shift</type>
+      <offset>873</offset>
+     </transformation>  
+     <transformation>       
+      <type>x-shift</type>
+      <offset>140</offset>
+     </transformation>    
+    <transformation>
+     <type>y-shift</type>
+     <property>/position/altitude-ft</property>
+     <interpolation>
+      <entry><ind>0.0</ind><dep>0</dep></entry>
+      <entry><ind>23500.0</ind><dep>0</dep></entry>
+      <entry><ind>30500.0</ind><dep>-1423</dep></entry>
+     </interpolation>     
+    </transformation>
+   </transformations>
+</layer>
+
+
+  <layer>
+   <name>ALT tape 7</name>
+   <w>67</w>
+   <h>1120</h>
+   <texture>
+    <path>Aircraft/NTPS/Instruments/Textures/alt-tape.rgb</path>
+    <x1>0.580</x1>
+    <y1>0.0</y1>
+    <x2>0.635</x2>
+    <y2>0.993</y2>
+   </texture>
+   <transformations>
+     <transformation>       
+      <type>y-shift</type>
+      <offset>873</offset>
+     </transformation>  
+     <transformation>       
+      <type>x-shift</type>
+      <offset>140</offset>
+     </transformation>    
+    <transformation>
+     <type>y-shift</type>
+     <property>/position/altitude-ft</property>
+     <interpolation>
+      <entry><ind>0.0</ind><dep>0</dep></entry>
+      <entry><ind>28500.0</ind><dep>0</dep></entry>
+      <entry><ind>35500.0</ind><dep>-1423</dep></entry>
+     </interpolation>     
+    </transformation>
+   </transformations>
+</layer>
+
+
+  <layer>
+   <name>ALT tape 8</name>
+   <w>67</w>
+   <h>1120</h>
+   <texture>
+    <path>Aircraft/NTPS/Instruments/Textures/alt-tape.rgb</path>
+    <x1>0.522</x1>
+    <y1>0.0</y1>
+    <x2>0.578</x2>
+    <y2>0.993</y2>
+   </texture>
+   <transformations>
+     <transformation>       
+      <type>y-shift</type>
+      <offset>873</offset>
+     </transformation>  
+     <transformation>       
+      <type>x-shift</type>
+      <offset>140</offset>
+     </transformation>    
+    <transformation>
+     <type>y-shift</type>
+     <property>/position/altitude-ft</property>
+     <interpolation>
+      <entry><ind>0.0</ind><dep>0</dep></entry>
+      <entry><ind>33500.0</ind><dep>0</dep></entry>
+      <entry><ind>40500.0</ind><dep>-1423</dep></entry>
+     </interpolation>     
+    </transformation>
+   </transformations>
+</layer>
+
+
+  <layer>
+   <name>ALT tape 9</name>
+   <w>67</w>
+   <h>1120</h>
+   <texture>
+    <path>Aircraft/NTPS/Instruments/Textures/alt-tape.rgb</path>
+    <x1>0.465</x1>
+    <y1>0.0</y1>
+    <x2>0.521</x2>
+    <y2>0.993</y2>
+   </texture>
+   <transformations>
+     <transformation>       
+      <type>y-shift</type>
+      <offset>873</offset>
+     </transformation>  
+     <transformation>       
+      <type>x-shift</type>
+      <offset>140</offset>
+     </transformation>    
+    <transformation>
+     <type>y-shift</type>
+     <property>/position/altitude-ft</property>
+     <interpolation>
+      <entry><ind>0.0</ind><dep>0</dep></entry>
+      <entry><ind>38500.0</ind><dep>0</dep></entry>
+      <entry><ind>45500.0</ind><dep>-1423</dep></entry>
+     </interpolation>     
+    </transformation>
+   </transformations>
+</layer>
+
+
+  <layer>
+   <name>ALT tape 10</name>
+   <w>67</w>
+   <h>1120</h>
+   <texture>
+    <path>Aircraft/NTPS/Instruments/Textures/alt-tape.rgb</path>
+    <x1>0.408</x1>
+    <y1>0.0</y1>
+    <x2>0.464</x2>
+    <y2>0.993</y2>
+   </texture>
+   <transformations>
+     <transformation>       
+      <type>y-shift</type>
+      <offset>873</offset>
+     </transformation>  
+     <transformation>       
+      <type>x-shift</type>
+      <offset>140</offset>
+     </transformation>    
+    <transformation>
+     <type>y-shift</type>
+     <property>/position/altitude-ft</property>
+     <interpolation>
+      <entry><ind>0.0</ind><dep>0</dep></entry>
+      <entry><ind>43500.0</ind><dep>0</dep></entry>
+      <entry><ind>50500.0</ind><dep>-1423</dep></entry>
+     </interpolation>     
+    </transformation>
+   </transformations>
+</layer>
+
+
+  <layer>
+   <name>ALT tape 11</name>
+   <w>67</w>
+   <h>1120</h>
+   <texture>
+    <path>Aircraft/NTPS/Instruments/Textures/alt-tape.rgb</path>
+    <x1>0.351</x1>
+    <y1>0.0</y1>
+    <x2>0.407</x2>
+    <y2>0.993</y2>
+   </texture>
+   <transformations>
+     <transformation>       
+      <type>y-shift</type>
+      <offset>873</offset>
+     </transformation>  
+     <transformation>       
+      <type>x-shift</type>
+      <offset>140</offset>
+     </transformation>    
+    <transformation>
+     <type>y-shift</type>
+     <property>/position/altitude-ft</property>
+     <interpolation>
+      <entry><ind>0.0</ind><dep>0</dep></entry>
+      <entry><ind>48500.0</ind><dep>0</dep></entry>
+      <entry><ind>55500.0</ind><dep>-1423</dep></entry>
+     </interpolation>     
+    </transformation>
+   </transformations>
+</layer>
+
+
+  <layer>
+   <name>ALT tape 12</name>
+   <w>67</w>
+   <h>1120</h>
+   <texture>
+    <path>Aircraft/NTPS/Instruments/Textures/alt-tape.rgb</path>
+    <x1>0.294</x1>
+    <y1>0.0</y1>
+    <x2>0.349</x2>
+    <y2>0.993</y2>
+   </texture>
+   <transformations>
+     <transformation>       
+      <type>y-shift</type>
+      <offset>873</offset>
+     </transformation>  
+     <transformation>       
+      <type>x-shift</type>
+      <offset>140</offset>
+     </transformation>    
+    <transformation>
+     <type>y-shift</type>
+     <property>/position/altitude-ft</property>
+     <interpolation>
+      <entry><ind>0.0</ind><dep>0</dep></entry>
+      <entry><ind>53500.0</ind><dep>0</dep></entry>
+      <entry><ind>60500.0</ind><dep>-1423</dep></entry>
+     </interpolation>     
+    </transformation>
+   </transformations>
+</layer>
+
+  <layer>
+   <name>ALT tape 13</name>
+   <w>67</w>
+   <h>1120</h>
+   <texture>
+    <path>Aircraft/NTPS/Instruments/Textures/alt-tape.rgb</path>
+    <x1>0.237</x1>
+    <y1>0.0</y1>
+    <x2>0.292</x2>
+    <y2>0.993</y2>
+   </texture>
+   <transformations>
+     <transformation>       
+      <type>y-shift</type>
+      <offset>873</offset>
+     </transformation>  
+     <transformation>       
+      <type>x-shift</type>
+      <offset>140</offset>
+     </transformation>    
+    <transformation>
+     <type>y-shift</type>
+     <property>/position/altitude-ft</property>
+     <interpolation>
+      <entry><ind>0.0</ind><dep>0</dep></entry>
+      <entry><ind>58500.0</ind><dep>0</dep></entry>
+      <entry><ind>65500.0</ind><dep>-1423</dep></entry>
+     </interpolation>     
+    </transformation>
+   </transformations>
+</layer>
+
+  <layer>
+   <name>ALT tape 14</name>
+   <w>67</w>
+   <h>1120</h>
+   <texture>
+    <path>Aircraft/NTPS/Instruments/Textures/alt-tape.rgb</path>
+    <x1>0.180</x1>
+    <y1>0.0</y1>
+    <x2>0.235</x2>
+    <y2>0.993</y2>
+   </texture>
+   <transformations>
+     <transformation>       
+      <type>y-shift</type>
+      <offset>873</offset>
+     </transformation>  
+     <transformation>       
+      <type>x-shift</type>
+      <offset>140</offset>
+     </transformation>    
+    <transformation>
+     <type>y-shift</type>
+     <property>/position/altitude-ft</property>
+     <interpolation>
+      <entry><ind>0.0</ind><dep>0</dep></entry>
+      <entry><ind>63500.0</ind><dep>0</dep></entry>
+      <entry><ind>70500.0</ind><dep>-1423</dep></entry>
+     </interpolation>     
+    </transformation>
+   </transformations>
+</layer>
+
+
+
+  <layer>
+   <name>RA tape</name>
+   <w>68</w>
+   <h>105</h>
+   <texture>
+    <path>Aircraft/NTPS/Instruments/Textures/P1000bezel.rgb</path>
+    <x1>0.695</x1>
+    <x2>0.571</x2>
+    <y1>0.005</y1>
+    <y2>0.056</y2>
+   </texture>
+   <transformations>
+     <transformation>       
+      <type>y-shift</type>
+      <offset>59</offset>
+     </transformation>  
+     <transformation>       
+      <type>x-shift</type>
+      <offset>140</offset>
+     </transformation>    
+    <transformation>
+     <type>y-shift</type>
+     <property>/position/altitude-agl-ft</property>
+     <interpolation>
+      <entry><ind>0.0</ind><dep>0</dep></entry>
+      <entry><ind>2500.0</ind><dep>-102</dep></entry>
+     </interpolation>     
+    </transformation>
+   </transformations>
+  </layer>
+
+
+ <layer>
+      <name>bezel</name>
+       <texture>
+	<path>Aircraft/NTPS/Instruments/Textures/P1000bezel.rgb</path>
+	<x1>0.0</x1>
+	<y1>0.250</y1>
+	<x2>0.574</x2>
+	<y2>1.0</y2>
+      </texture>
+      <w>440</w>
+      <h>572</h>
+     </layer>
+
+  <layer>
+   <name>Airspeed Text</name>
+   <type>text</type>
+  <font>helvetica_bold</font>
+<point-size>16</point-size>
+   <color>
+    <red>0.8</red>
+    <green>0.8</green>
+    <blue>0.8</blue>
+   </color>
+   <chunks>
+    <chunk>
+     <type>number-value</type>
+     <property>/velocities/airspeed-kt</property>
+     <format>%03.0f</format>
+    </chunk>
+   </chunks>
+   <transformations>
+    <transformation>
+     <type>x-shift</type>
+     <offset>-149</offset>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <offset>105</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
+
+  <layer>
+   <name>Mach Text</name>
+   <type>text</type>
+  <font>helvetica_bold</font>
+  <point-size>12</point-size>
+  <color>
+    <red>0.1</red>
+    <green>0.8</green>
+    <blue>0.3</blue>
+  </color>
+   <chunks>
+    <chunk>
+     <type>number-value</type>
+     <property>/velocities/mach</property>
+     <format>%1.3f</format>
+    </chunk>
+	   <chunk>
+      <type>literal</type>
+      <text>M</text>
+    </chunk>
+   </chunks>
+   <transformations>
+    <transformation>
+     <type>x-shift</type>
+     <offset>-150</offset>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <offset>0</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
+  <layer>
+   <name>Altitude Text</name>
+   <type>text</type>
+  <font>helvetica_bold</font>
+   <point-size>16</point-size>
+   <color>
+    <red>0.8</red>
+    <green>0.8</green>
+    <blue>0.8</blue>
+   </color>
+   <chunks>
+    <chunk>
+     <type>number-value</type>
+     <property>/position/altitude-ft</property>
+     <format>%05.0f</format>
+    </chunk>
+   </chunks>
+   <transformations>
+    <transformation>
+     <type>x-shift</type>
+     <offset>116</offset>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <offset>105</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
+  <layer>
+   <name>INHG Text</name>
+   <type>text</type>
+  <font>helvetica_bold</font>
+  <point-size>12</point-size>
+   <color>
+    <red>0.8</red>
+    <green>0.8</green>
+    <blue>0.8</blue>
+   </color>
+   <chunks>
+    <chunk>
+     <type>number-value</type>
+     <property>/instrumentation/altimeter/setting-inhg</property>
+     <format>%2.2f</format>
+    </chunk>
+	  <chunk>
+      <type>literal</type>
+      <text>IN</text>
+    </chunk>
+   </chunks>
+   <transformations>
+    <transformation>
+     <type>x-shift</type>
+     <offset>115</offset>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <offset>0</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
+ <layer>
+   <name>GSPD Text</name>
+   <type>text</type>
+  <font>helvetica_bold</font>
+  <point-size>12</point-size>
+   <color>
+    <red>0.8</red>
+    <green>0.8</green>
+    <blue>0.8</blue>
+   </color>
+   <chunks>
+	  <chunk>
+      <type>literal</type>
+      <text>GSPD
+    KTS</text>
+    </chunk>
+   </chunks>
+   <transformations>
+    <transformation>
+     <type>x-shift</type>
+     <offset>68</offset>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <offset>-160</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
+ <layer>
+   <name>GSPD Value</name>
+   <type>text</type>
+  <font>helvetica_bold</font>
+  <point-size>14</point-size>
+  <color>
+    <red>0.1</red>
+    <green>0.8</green>
+    <blue>0.3</blue>
+  </color>
+   <chunks>
+   <chunk>
+   <type>number-value</type>
+   <property>/velocities/uBody-fps</property>
+   <scale>0.5921</scale>
+    <format>%3.0f</format>
+    </chunk>
+   </chunks>
+   <transformations>
+    <transformation>
+     <type>x-shift</type>
+     <offset>64</offset>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <offset>-174</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
+
+
+ <layer>
+   <name>VSI Text</name>
+   <type>text</type>
+  <font>helvetica_bold</font>
+  <point-size>14</point-size>
+  <color>
+    <red>0.1</red>
+    <green>0.8</green>
+    <blue>0.3</blue>
+  </color>
+   <chunks>
+    <chunk>
+     <type>number-value</type>
+     <property>/autopilot/internal/vert-speed-fpm</property>
+     <format>%4.0f</format>
+    </chunk>
+   </chunks>
+   <transformations>
+    <transformation>
+     <type>x-shift</type>
+     <offset>120</offset>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <offset>-105</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
+
+
+
+   <layer>
+    <name>VSI</name>
+    <texture>
+     <path>Aircraft/NTPS/Instruments/Textures/P1000bezel.rgb</path>
+     <x1>0.056</x1>
+     <y1>0.199</y1>
+     <x2>0.116</x2>
+     <y2>0.223</y2>
+    </texture>
+    <w>60</w>
+    <h>18</h>
+    <transformations>
+     <transformation>
+      <type>x-shift</type>
+      <offset>178</offset>
+     </transformation>
+     <transformation>
+      <type>y-shift</type>
+      <offset>-100</offset>
+     </transformation>      
+    <transformation>
+     <type>rotation</type>
+     <property>/autopilot/internal/vert-speed-fpm</property>
+     <min>-4000.0</min>
+     <max>4000.0</max>
+     <scale>1.0</scale>
+     <offset>0</offset>
+     <interpolation>
+      <entry><ind>  -4000.0</ind><dep>-82</dep></entry>
+      <entry><ind>  -3000.0</ind><dep>-62</dep></entry>
+      <entry><ind>  -2000.0</ind><dep> -41</dep></entry>
+      <entry><ind>   -1000.0</ind><dep> -20.5</dep></entry>
+      <entry><ind>      0.0</ind><dep>   0.0</dep></entry>
+      <entry><ind>    1000.0</ind><dep>  20.5</dep></entry>
+      <entry><ind>   2000.0</ind><dep>  41</dep></entry>
+      <entry><ind>   3000.0</ind><dep> 62</dep></entry>
+      <entry><ind>   4000.0</ind><dep> 82</dep></entry>
+     </interpolation>     
+    </transformation>
+ <transformation>
+      <type>x-shift</type>
+      <offset>-30</offset>
+     </transformation>
+   </transformations>
+  </layer>
+  
+<!-- Autopilot info-->
+
+<layer>
+  <name>Selected Alt-text</name>
+  <condition>
+  <equals>
+  <property>/autopilot/locks/altitude</property>
+  <value>altitude-hold</value>
+  </equals>
+  </condition>
+  <type>text</type>
+  <font>helvetica_bold</font>
+  <point-size>16</point-size>
+  <color>
+    <red>0.5</red>
+    <green>0.8</green>
+    <blue>0.9</blue>
+  </color>
+  <chunks>
+   <chunk>
+   <type>number-value</type>
+   <property>/autopilot/settings/target-altitude-ft</property>
+    <format>%5.0f</format>
+    </chunk>
+  </chunks>
+  <transformations>
+    <transformation>
+      <type>x-shift</type>
+      <offset>116</offset>
+    </transformation>
+    <transformation>
+      <type>y-shift</type>
+      <offset>220</offset>
+    </transformation>
+  </transformations>
+</layer>
+  
+ <layer>
+   <name>HGD annun</name>
+  <condition>
+  <equals>
+  <property>/autopilot/locks/heading</property>
+  <value>dg-heading-hold</value>
+  </equals>
+  </condition>
+   <type>text</type>
+  <font>helvetica_bold</font>
+  <point-size>12</point-size>
+   <color>
+    <red>0.8</red>
+    <green>0.8</green>
+    <blue>0.8</blue>
+   </color>
+   <chunks>
+	  <chunk>
+      <type>literal</type>
+      <text>HDG</text>
+    </chunk>
+   </chunks>
+   <transformations>
+    <transformation>
+     <type>x-shift</type>
+     <offset>-168</offset>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <offset>-160</offset>
+    </transformation>
+   </transformations>
+  </layer>  
+  
+ <layer>
+  <name>HDG bug bearing</name>
+  <condition>
+  <equals>
+  <property>/autopilot/locks/heading</property>
+  <value>dg-heading-hold</value>
+  </equals>
+  </condition>
+  <type>text</type>
+  <font>helvetica_bold</font>
+  <point-size>16</point-size>
+  <color>
+    <red>0.5</red>
+    <green>0.8</green>
+    <blue>0.9</blue>
+  </color>
+  <chunks>
+   <chunk>
+   <type>number-value</type>
+   <property>/autopilot/settings/heading-bug-deg</property>
+    <format>%03.0f</format>
+    </chunk>
+  </chunks>
+  <transformations>
+    <transformation>
+      <type>x-shift</type>
+      <offset>-168</offset>
+    </transformation>
+    <transformation>
+      <type>y-shift</type>
+      <offset>-176</offset>
+    </transformation>
+  </transformations>
+</layer> 
+  
+  
+  
+  
+  
+  
+ </layers>   
+ </PropertyList>
