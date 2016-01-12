@@ -3,6 +3,8 @@
 <PropertyList include="NTPS-base.xml">
  <sim>
   <description>NTPS Engineering Panel</description>
+  <variant-of>NTPS-HD1</variant-of
+
   <panel>
    <path>Aircraft/NTPS/Panels/NTPS-panel-eng.xml</path>
    <visibility archive="y">true</visibility>

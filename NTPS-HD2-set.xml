@@ -3,6 +3,8 @@
 <PropertyList include="NTPS-base.xml">
  <sim>
   <description>NTPS Heads Down Display Option #2</description>
+  <variant-of>NTPS-HD1</variant-of>
+
   <panel>
    <path>Aircraft/NTPS/Panels/NTPS-panel-2.xml</path>
    <visibility archive="y">true</visibility>
