@@ -3,6 +3,8 @@
 <PropertyList include="NTPS-base.xml">
  <sim>
   <description>NTPS OTW + HUD</description>
+  <variant-of>NTPS-HD1</variant-of>
+
   <hud>
    <path n="1">Huds/NTPS.xml</path>
    <visibility n="1">true</visibility>
